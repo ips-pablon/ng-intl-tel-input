@@ -38,6 +38,7 @@ angular.module('ngIntlTelInput')
           }
           // Validation.
           ctrl.$validators.ngIntlTelInput = function (value) {
+            return true; // DISABLE VALIDATION
             // if phone number is deleted / empty do not run phone number validation
             if (value || elm[0].value.length > 0) {
                 return elm.intlTelInput('isValidNumber');
